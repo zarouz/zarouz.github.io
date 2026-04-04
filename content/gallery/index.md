@@ -10,17 +10,17 @@ viewerOptions: {
     backdrop: true
 }
 galleryImages:
-  - src: /images/gallery/IMG_0032.JPG
-  - src: /images/gallery/IMG_0561.JPG
-  - src: /images/gallery/IMG_0656 2.jpg
-  - src: /images/gallery/IMG_8683.JPG
-  - src: /images/gallery/IMG_9400.JPG
-  - src: /images/gallery/IMG_9414.JPG
-  - src: /images/gallery/IMG_9712.jpg
-  - src: /images/gallery/IMG_9719.JPG
-  - src: /images/gallery/IMG_9821.jpg
-  - src: /images/gallery/IMG_9863.JPG
-  - src: /images/gallery/IMG_9920.JPG
-  - src: /images/gallery/IMG_9925.JPG
-  - src: /images/gallery/IMG_9975.jpg
+  - src: /images/gallery/IMG_0032.webp
+  - src: /images/gallery/IMG_0561.webp
+  - src: /images/gallery/IMG_0656 2.webp
+  - src: /images/gallery/IMG_8683.webp
+  - src: /images/gallery/IMG_9400.webp
+  - src: /images/gallery/IMG_9414.webp
+  - src: /images/gallery/IMG_9712.webp
+  - src: /images/gallery/IMG_9719.webp
+  - src: /images/gallery/IMG_9821.webp
+  - src: /images/gallery/IMG_9863.webp
+  - src: /images/gallery/IMG_9920.webp
+  - src: /images/gallery/IMG_9925.webp
+  - src: /images/gallery/IMG_9975.webp
 ---
