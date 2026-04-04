@@ -1,0 +1,223 @@
+baseURL: "https://zarouz.github.io"
+languageCode: "en-us"
+title: "Karthik Yadav"
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: resume
+      name: Resume
+      title: Resume
+      url: /Resume.pdf
+      weight: 1
+    - identifier: gallery
+      name: Gallery
+      title: Gallery
+      url: /gallery
+      weight: 2
+    - identifier: notes
+      name: Notes
+      title: Technical Notes
+      url: https://zarouz.github.io/notes
+      weight: 3
+
+params:
+  title: "Karthik Yadav"
+  description: "ML Engineer & Systems Programmer"
+  favicon: "/fav.png"
+  useBootstrapCDN: false
+  mathjax: true
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light"
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  navbar:
+    align: ms-auto
+    brandName: "Karthik Yadav"
+    showBrandLogo: false
+    disableSearch: true
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
+      disableContact: true
+  hero:
+    enable: false
+    intro: "Hi, my name is"
+    title: "Karthik."
+    subtitle: "I build systems that learn from data"
+    content: "ML engineer and systems programmer. I work at the intersection of deep learning, quantitative finance, and low-latency infrastructure. First-author at AIAI 2026 (Springer LNCS)."
+    image: /images/hero.svg
+    bottomImage:
+      enable: true
+    button:
+      enable: true
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/zarouz
+        - icon: fab fa-linkedin
+          url: https://linkedin.com/in/YOUR_LINKEDIN_ID
+
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.png"
+    content: |-
+      I'm Karthik Yadav, a final-year Computer Science student at VIT Vellore (graduating July 2026, CGPA 8.03/10). I work on applied ML, quantitative finance, and low-latency systems.
+
+      My recent work focuses on microstructure prediction for high-frequency trading. I built a Transformer architecture that fuses limit order book state with Hawkes process intensity features, achieving +6.13pp over baseline (p<0.0001). That work was accepted as a first-author paper at AIAI 2026 (Springer LNCS).
+
+      Outside of research, I build things in C++ and Go and play badminton regularly.
+
+  experience:
+    enable: true
+    title: "Publications"
+    items:
+      - company: "Springer LNCS / IFIP AICT"
+        companyUrl: "#"
+        jobs:
+          - name: "AIAI 2026 — First Author"
+            date: "2026"
+            content: "When Not to Trade: Hawkes Intensity Burst Detection for Regime-Aware Limit Order Book Prediction. Cross-attention Transformer fusing LOB state with Hawkes process features; +6.13pp accuracy over baseline (p<0.0001)."
+
+      - company: "Elsevier — Procedia Computer Science"
+        companyUrl: "#"
+        jobs:
+          - name: "ICECMSN 2025 — Co-author"
+            date: "2025"
+            content: "Energy-efficient multi-hop communication protocol for wireless sensor networks, improving network coverage by 30%."
+
+      - company: "IEEE"
+        companyUrl: "#"
+        jobs:
+          - name: "OTCON 5.0 — Co-author"
+            date: "2026"
+            content: "AI-powered interview platform using RAG architecture with Google Gemini LLM."
+  education:
+    enable: true
+    index: false
+    items:
+      - title: "B.Tech in Computer Science and Engineering"
+        school:
+          name: "Vellore Institute of Technology, Vellore"
+          url: "https://vit.ac.in"
+        date: "Sep 2022 - Jul 2026"
+        GPA: "8.03 / 10"
+
+  achievements:
+    enable: false
+    items:
+      - title: "AIAI 2026 (Springer LNCS)"
+        content: "First-author paper accepted. Hawkes process + Transformer fusion for regime-aware LOB prediction."
+      - title: "Amazon HackOn Season 5"
+        content: "Top 75 out of 52,000 participants."
+        url: "#"
+      - title: "DevSoc'25 Best Project"
+        content: "Media & Entertainment track, India's largest student-run hackathon (140+ teams)."
+      - title: "IEEE OTCON 5.0"
+        content: "Paper accepted on AI-powered interview platforms, OPJU International Technology Conference 2026."
+      - title: "Elsevier / ICECMSN 2025"
+        content: "Co-authored peer-reviewed publication on energy-efficient WSN protocols."
+
+  projects:
+    enable: true
+    items:
+      - title: "Hawkes + Transformer LOB Prediction"
+        content: "Deep learning system fusing limit order book state with Hawkes process intensity features for high-frequency mid-price prediction. +6.13pp over baseline (p<0.0001)."
+        image: /images/projects/P1.png
+        badges:
+          - "PyTorch"
+          - "C++"
+          - "Numba"
+          - "ONNX"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/zarouz/hawkes-lob-transformer
+
+      - title: "Concurrency Benchmark Engine"
+        content: "Multi-level C++ and Go benchmark comparing five concurrency architectures against PostgreSQL with TCP latency injection via macOS dummynet."
+        image: /images/projects/P2.PNG
+        badges:
+          - "C++"
+          - "Go"
+          - "PostgreSQL"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/zarouz
+
+  contact:
+    enable: false
+    content: "Open to ML Engineer, SDE, and Data Scientist roles in Bangalore/Hyderabad or remote. Also happy to discuss research collaboration."
+    btnName: Mail me
+    btnLink: mailto:vkarthikyadav@gmail.com
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: false
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/zarouz
+      linkedin: https://www.linkedin.com/in/karthik-yadav-b61b56211
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"

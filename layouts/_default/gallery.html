@@ -1,12 +1,32 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
-<!-- <link rel="stylesheet" href="{{ (printf "%scss/list.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all"> -->
 {{ if .Params.viewer | default true }}
 <link rel="stylesheet" href="{{ (printf "%scss/gallery.css" (.Site.Params.staticPath | default "")) | relURL }}">
 <link rel="stylesheet" href="{{ (printf "%sviewer/viewer.min.css" (.Site.Params.staticPath | default "")) | relURL }}">
 <script src="{{ (printf "%sviewer/viewer.min.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
 {{ end }}
-
+<style>
+    .masonry-gallery {
+        columns: 3;
+        column-gap: 8px;
+    }
+    .masonry-gallery img {
+        width: 100%;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        cursor: zoom-in;
+    }
+    @media (max-width: 768px) {
+        .masonry-gallery {
+            columns: 2;
+        }
+    }
+    @media (max-width: 480px) {
+        .masonry-gallery {
+            columns: 1;
+        }
+    }
+</style>
 {{ end }}
 
 {{ define "title" }}
@@ -20,14 +40,10 @@
     <div class="row p-4">
         {{ .Content | emojify }}
     </div>
-    <div class="card-group p-4">
-        <div class="row justify-content-center">
+    <div class="p-4">
+        <div class="masonry-gallery">
             {{ range .Params.galleryImages }}
-            <div class="col-md-4 p-0 m-0">
-                <div class="card p-0 m-0 border-0">
-                    <img class="w-100 {{if .Params.viewer | default true}}viewer-enabled-image{{end}}" height="280px" src="{{ .src }}">
-                </div>
-            </div>
+            <img class="viewer-enabled-image" src="{{ .src }}">
             {{ end }}
         </div>
     </div>
@@ -42,5 +58,4 @@
     });
 </script>
 {{ end }}
-
 {{ end }}
