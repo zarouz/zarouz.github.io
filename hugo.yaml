@@ -42,7 +42,7 @@ Menus:
 params:
   title: "Karthik Yadav"
   description: "ML Engineer & Systems Programmer"
-  favicon: "/fav.png"
+  favicon: "/favicon.svg"
   useBootstrapCDN: false
   mathjax: true
   animate: true
