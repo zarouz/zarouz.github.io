@@ -26,7 +26,7 @@ Menus:
     - identifier: resume
       name: Resume
       title: Resume
-      url: /Resume.pdf
+      url: /resume.pdf
       weight: 1
     - identifier: gallery
       name: Gallery
